@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BlogApp</string>
+    <string name="app_setting">Setting</string>
+
+    <string name="app_text_size">Text Size</string>
+    <string name="app_text_color">Text Color</string>
+    <string name="app_background">Background Color</string>
+
+    <array name="setting_array">
+        <item>@string/app_text_size</item>
+        <item>@string/app_text_color</item>
+        <item>@string/app_background</item>
+    </array>
+</resources>
