@@ -21,7 +21,8 @@ public class Phone {
     private String mDefaultInput;
     private String[] mOther;
 
-    public Phone(){}
+    public Phone() {
+    }
 
     public Phone(TYPE mType, boolean mWifi, boolean mBluetooth,
                  int mMemorySize, int mDiskSize, int mPowerSize,
@@ -168,35 +169,35 @@ public class Phone {
 
         public Phone build() {
             Phone phone = new Phone();
-            if (mWType != null && mWType.get()!= null){
+            if (mWType != null && mWType.get() != null) {
                 phone.setType(mWType.get());
             }
 
-            if (mWBluetooth != null && mWBluetooth.get()!= null){
+            if (mWBluetooth != null && mWBluetooth.get() != null) {
                 phone.setBluetooth(mWBluetooth.get());
             }
 
-            if (mWMemorySize != null && mWMemorySize.get()!= null){
+            if (mWMemorySize != null && mWMemorySize.get() != null) {
                 phone.setMemorySize(mWMemorySize.get());
             }
 
-            if (mWDiskSize != null && mWDiskSize.get()!= null){
+            if (mWDiskSize != null && mWDiskSize.get() != null) {
                 phone.setDiskSize(mWDiskSize.get());
             }
 
-            if (mWPowerSize != null && mWPowerSize.get()!= null){
+            if (mWPowerSize != null && mWPowerSize.get() != null) {
                 phone.setPowerSize(mWPowerSize.get());
             }
 
-            if (mWLocale != null && mWLocale.get()!= null){
+            if (mWLocale != null && mWLocale.get() != null) {
                 phone.setLocale(mWLocale.get());
             }
 
-            if (mWDefaultInput != null && mWDefaultInput.get()!= null){
+            if (mWDefaultInput != null && mWDefaultInput.get() != null) {
                 phone.setDefaultInput(mWDefaultInput.get());
             }
 
-            if (mWOther != null && mWOther.get()!= null){
+            if (mWOther != null && mWOther.get() != null) {
                 phone.setOther(mWOther.get());
             }
 

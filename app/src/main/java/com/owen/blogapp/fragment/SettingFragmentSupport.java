@@ -3,11 +3,13 @@ package com.owen.blogapp.fragment;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +21,7 @@ import com.owen.blogapp.R;
  * Created by owen on 2017/12/10.
  */
 
-public class SettingFragmentSupport extends Fragment implements View.OnClickListener{
+public class SettingFragmentSupport extends Fragment implements View.OnClickListener {
     private static final String TAG = SettingFragmentSupport.class.getSimpleName();
     public static String ID = TAG + ".ID";
 
@@ -53,7 +55,7 @@ public class SettingFragmentSupport extends Fragment implements View.OnClickList
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(),
-                        ((LinearLayoutManager)mRecyclerView.getLayoutManager()).getOrientation()));
+                ((LinearLayoutManager) mRecyclerView.getLayoutManager()).getOrientation()));
 
         mTextView = root.findViewById(R.id.item_name);
         return root;
@@ -80,7 +82,7 @@ public class SettingFragmentSupport extends Fragment implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        switch ((int)v.getTag()){
+        switch ((int) v.getTag()) {
             case R.string.app_text_size:
                 //do something
                 break;
@@ -92,7 +94,7 @@ public class SettingFragmentSupport extends Fragment implements View.OnClickList
                 break;
         }
 
-        mTextView.setText((int)v.getTag());
+        mTextView.setText((int) v.getTag());
     }
 
     private class Adapter extends RecyclerView.Adapter<ItemVH> {

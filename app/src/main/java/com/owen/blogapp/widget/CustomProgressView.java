@@ -3,20 +3,20 @@ package com.owen.blogapp.widget;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.ComposeShader;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.Shader;
-import android.graphics.SweepGradient;
-import android.support.v7.widget.AppCompatImageView;
+
+import androidx.appcompat.widget.AppCompatImageView;
+
 import android.util.AttributeSet;
 
 /**
  * Created by owen on 2018/1/23.
  */
 
-public class CustomProgressView extends AppCompatImageView{
+public class CustomProgressView extends AppCompatImageView {
 
     private Paint mPaint = new Paint();
     private final float default_arc_angle = 360 * 0.8f;
@@ -33,7 +33,7 @@ public class CustomProgressView extends AppCompatImageView{
 
     }
 
-    private void initPain(){
+    private void initPain() {
         mPaint = new Paint();
 
         mPaint.setAntiAlias(true);
@@ -41,7 +41,7 @@ public class CustomProgressView extends AppCompatImageView{
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeCap(Paint.Cap.ROUND);
 
-        LinearGradient linearGradient = new LinearGradient(getMeasuredWidth()/2f, getMeasuredHeight(), getMeasuredWidth()/2f, 0, Color.GRAY, Color.TRANSPARENT, Shader.TileMode.CLAMP);
+        LinearGradient linearGradient = new LinearGradient(getMeasuredWidth() / 2f, getMeasuredHeight(), getMeasuredWidth() / 2f, 0, Color.GRAY, Color.TRANSPARENT, Shader.TileMode.CLAMP);
         mPaint.setShader(linearGradient);
     }
 
@@ -56,7 +56,7 @@ public class CustomProgressView extends AppCompatImageView{
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        float startAngle =  90 - default_arc_angle / 2f;
+        float startAngle = 90 - default_arc_angle / 2f;
         float finishedStartAngle = startAngle;
 
         canvas.drawArc(rectF, finishedStartAngle, default_arc_angle, false, mPaint);

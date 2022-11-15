@@ -1,19 +1,16 @@
 package com.owen.blogapp.fragment;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
-import android.widget.TextView;
 
 import com.owen.blogapp.R;
 
@@ -62,7 +59,7 @@ public class CustomViewFragmentSupport extends Fragment {
         super.onResume();
 
         Animation am = new RotateAnimation(0, 359, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        am.setDuration( 2000 );
+        am.setDuration(2000);
         am.setRepeatCount(Animation.INFINITE);
         mProgress.setAnimation(am);
         am.startNow();

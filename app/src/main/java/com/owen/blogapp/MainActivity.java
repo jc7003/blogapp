@@ -1,15 +1,13 @@
 package com.owen.blogapp;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTabHost;
-import android.util.SparseArray;
+
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTabHost;
 
 import com.owen.blogapp.fragment.CustomViewFragmentSupport;
 import com.owen.blogapp.fragment.IndexTabFragmentSupport;
 import com.owen.blogapp.fragment.SettingFragmentSupport;
-
-import java.util.Random;
 
 public class MainActivity extends FragmentActivity {
 
